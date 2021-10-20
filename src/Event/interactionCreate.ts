@@ -16,7 +16,7 @@ export default {
                     } else {
                         const guildMember = await interaction.guild.members.fetch(client.user!.id);
                         if (!guildMember) return interaction.reply("I am not in this guild! (Is this an error? will this ever happened?)");
-                        if (!guildMember.permissions.has(SlashCommand.permissions)) return interaction.reply(`I don't have permission to run this command!\nMissing Permission: ${guildMember.permissions.missing(SlashCommand.permissions).join(", ")}`);
+                        if (guildMember.id != interaction.guild.ownerId && !guildMember.permissions.has(SlashCommand.permissions)) return interaction.reply(`I don't have permission to run this command!\nMissing Permission: ${guildMember.permissions.missing(SlashCommand.permissions).join(", ")}`);
                     }
                 }
                 SlashCommand.interaction(client, interaction);
