@@ -15,7 +15,7 @@ export default class {
         this.CommandList = [];
         this.CommandMap = new Map();
         return new Promise((resolve, reject) => {
-            glob(path.join(__dirname, "..\\Command") + "\\**\\*.+(js|ts)", (err: Error | null, matches: string[]) => {
+            glob(path.join(__dirname, "..\\Command\\**\\*.+(js|ts)"), (err: Error | null, matches: string[]) => {
                 if (err) return reject(err);
                 matches.forEach(async (filePath: string) => {
                     delete require.cache[filePath];
