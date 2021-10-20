@@ -12,7 +12,7 @@ export default {
                 if (SlashCommand.permissions) {
                     if (!interaction.guild) return interaction.reply("You need to run this command in a guild text channel!");
                     if (interaction.user.id != interaction.guild.ownerId && (!interaction.memberPermissions || !interaction.memberPermissions.has(SlashCommand.permissions))) {
-                        return interaction.reply(`You don't have permission to this run command!"\nMissing Permission: "${(interaction.memberPermissions ? interaction.memberPermissions.missing(SlashCommand.permissions) : new Discord.Permissions().add(SlashCommand.permissions).toArray()).join(", ")}`);
+                        return interaction.reply(`You don't have permission to this run command!\nMissing Permission: ${(interaction.memberPermissions ? interaction.memberPermissions.missing(SlashCommand.permissions) : new Discord.Permissions().add(SlashCommand.permissions).toArray()).join(", ")}`);
                     } else {
                         const guildMember = await interaction.guild.members.fetch(client.user!.id)!;
                         if (!guildMember.permissions.has(SlashCommand.permissions)) return interaction.reply(`I don't have permission to run this command!\nMissing Permission: ${guildMember.permissions.missing(SlashCommand.permissions).join(", ")}`);
