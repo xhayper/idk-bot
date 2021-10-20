@@ -16,6 +16,6 @@ export default {
                 } catch (ignored) { }
             }
         }
-        console.log(`${client.user?.tag} is ready!`);
+        console.log(`${client.user ? client.user.tag + " is" : "I am"} ready!`);
     }
 } as Event
