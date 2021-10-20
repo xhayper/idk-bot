@@ -18,7 +18,8 @@ export default class extends Discord.Client {
         super(options);
         this.eventManager = new EventManager(this);
         this.slashCommandManager = new SlashCommandManager();
-        this.config = fs.existsSync(path.join(__dirname, "..\\..\\config.json")) ? require(path.join(__dirname, "..\\..\\config.json")) : {}
+        const configPath = path.join(__dirname, "..\\..\\config.json");
+        this.config = fs.existsSync(configPath) ? require(configPath) : {}
     }
 
     registerSlashCommand(CommandList?: SlashCommand | SlashCommand[]) {
