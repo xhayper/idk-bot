@@ -1,1 +1,1 @@
-# puro-bot
+# idk-bot
