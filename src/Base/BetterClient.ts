@@ -6,6 +6,7 @@ import { REST } from "@discordjs/rest";
 import * as Discord from "discord.js";
 import { Config } from "./Config";
 import * as path from "path";
+import * as fs from "fs";
 
 export default class extends Discord.Client {
 
@@ -17,7 +18,7 @@ export default class extends Discord.Client {
         super(options);
         this.eventManager = new EventManager(this);
         this.slashCommandManager = new SlashCommandManager();
-        this.config = require(path.join(__dirname, "..\\..\\config.json")) || {}
+        this.config = fs.existsSync(path.join(__dirname, "..\\..\\config.json")) ? require(path.join(__dirname, "..\\..\\config.json")) : {}
     }
 
     registerSlashCommand(CommandList?: SlashCommand | SlashCommand[]) {
