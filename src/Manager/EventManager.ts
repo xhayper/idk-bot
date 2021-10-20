@@ -22,12 +22,16 @@ export default class {
                     delete require.cache[filePath];
                     const event: Event = (await import(filePath)).default;
                     if (!event.eventName) return;
-                    /* @ts-ignore */
-                    if (event.on) this.client.on(event.eventName, (...args: any[]) => event.on(this.client, ...args));
-                    /* @ts-ignore */
-                    if (event.off) this.client.off(event.eventName, (...args: any[]) => event.off(this.client, ...args));
-                    /* @ts-ignore */
-                    if (event.once) this.client.once(event.eventName, (...args: any[]) => event.once(this.client, ...args));
+                    /*
+                        if (event.on) this.client.on(event.eventName, (...args: any[]) => event.on(this.client, ...args));
+                        if (event.off) this.client.off(event.eventName, (...args: any[]) => event.off(this.client, ...args));
+                        if (event.once) this.client.once(event.eventName, (...args: any[]) => event.once(this.client, ...args));
+                        ^ Stored incase the one below broke ^
+                    */
+                    ["on", "off", "once"].forEach(functionName => {
+                        // @ts-ignore
+                        if (event[functionName] && typeof (event[functionName]) == "function") this.client[functionName](event.eventName, (...args: any[]) => event[functionName](this.client, ...args));
+                    });
                 });
                 return resolve();
             })
