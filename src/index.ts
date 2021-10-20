@@ -3,7 +3,7 @@ import * as Discord from "discord.js";
 import * as dotenv from "dotenv";
 import * as path from "path";
 
-dotenv.config({ path: path.join(__dirname, "../") + "\\.env" });
+dotenv.config({ path: path.join(__dirname, "..\\.env") });
 
 if (!process.env.DISCORD_TOKEN) process.exit(-1);
 
