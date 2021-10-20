@@ -218,11 +218,6 @@ binary-extensions@^2.0.0:
   resolved "https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-2.2.0.tgz#75f502eeaf9ffde42fc98829645be4ea76bd9e2d"
   integrity sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==
 
-binarytf@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/binarytf/-/binarytf-2.0.0.tgz#c5476cc5cdf023d075b9b8fa62612b86d36f666c"
-  integrity sha512-CS0MvijAFAHBBw4LgIHBP7wzdW3KWEB0KeMjblK0rHOyyhnkoMu3puW7uhJXlnS5WDn5M2XQFaQBtw00FwRfcA==
-
 boxen@^5.0.0:
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/boxen/-/boxen-5.1.2.tgz#788cb686fc83c1f486dfa8a40c68fc2b831d2b50"
@@ -422,7 +417,7 @@ discord-api-types@^0.24.0:
   resolved "https://registry.npmjs.org/discord-api-types/-/discord-api-types-0.24.0.tgz"
   integrity sha512-X0uA2a92cRjowUEXpLZIHWl4jiX1NsUpDhcEOpa1/hpO1vkaokgZ8kkPtPih9hHth5UVQ3mHBu/PpB4qjyfJ4A==
 
-discord.js@^13.1.0, discord.js@^13.2.0:
+discord.js@^13.2.0:
   version "13.2.0"
   resolved "https://registry.npmjs.org/discord.js/-/discord.js-13.2.0.tgz"
   integrity sha512-nyxUvL8wuQG38zx13wUMkpcA8koFszyiXdkSLwwM9opKW2LC2H5gD0cTZxImeJ6GtEnKPWT8xBiE8lLBmbNIhw==
@@ -718,15 +713,6 @@ keyv@^3.0.0:
   dependencies:
     json-buffer "3.0.0"
 
-kurasuta@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/kurasuta/-/kurasuta-3.0.1.tgz#83fa45bfa97212b6df70705079ab9d518d855a7f"
-  integrity sha512-RW5tAdwgAcfMsY8uJpVe6Wk/UlF2HHLzZcPFJQQRDjBdSVUVSlYmqnxQeHwwuyykkpGlftd+gv0Cp5p4WMjW+A==
-  dependencies:
-    discord.js "^13.1.0"
-    node-fetch "^2.6.2"
-    veza "^1.1.0"
-
 latest-version@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/latest-version/-/latest-version-5.1.0.tgz#119dfe908fe38d15dfa43ecd13fa12ec8832face"
@@ -807,7 +793,7 @@ nan@^2.14.0:
   resolved "https://registry.npmjs.org/nan/-/nan-2.15.0.tgz"
   integrity sha512-8ZtvEnA2c5aYCZYd1cvgdnU6cqwixRoYg70xPLWUws5ORTa/lnw+u4amixRS/Ac5U5mQVgp9pnlSUnbNWFaWZQ==
 
-node-fetch@^2.6.1, node-fetch@^2.6.2:
+node-fetch@^2.6.1:
   version "2.6.5"
   resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.5.tgz"
   integrity sha512-mmlIVHJEu5rnIxgEgez6b9GgWXbkZj5YZ7fx+2r94a2E+Uirsp6HsPTPlomfdHtpt/B0cdKviwkoaM6pyvUOpQ==
@@ -1147,13 +1133,6 @@ vali-date@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/vali-date/-/vali-date-1.0.0.tgz"
   integrity sha1-G5BKWWCfsyjvB4E4Qgk09rhnCaY=
-
-veza@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/veza/-/veza-1.1.0.tgz#f1910bdfa5293cf812b01b8e033b7c216793b2ab"
-  integrity sha512-JxDVZZXwFJ+FxsX+kPdsjRK9XZdwayEYzPsPLxpZjzzgncWphjvMlzn8ioVAgeonZ/Aa7vEZOb4Hp13ergwybA==
-  dependencies:
-    binarytf "^2.0.0"
 
 webidl-conversions@^3.0.0:
   version "3.0.1"
