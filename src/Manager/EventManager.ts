@@ -23,8 +23,11 @@ export default class {
                     const event: Event = (await import(filePath)).default;
                     if (!event.eventName) return;
                     /*
+                        // @ts-ignore
                         if (event.on) this.client.on(event.eventName, (...args: any[]) => event.on(this.client, ...args));
+                        // @ts-ignore
                         if (event.off) this.client.off(event.eventName, (...args: any[]) => event.off(this.client, ...args));
+                        // @ts-ignore
                         if (event.once) this.client.once(event.eventName, (...args: any[]) => event.once(this.client, ...args));
                         ^ Stored incase the one below broke ^
                     */
