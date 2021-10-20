@@ -16,7 +16,7 @@ export default class {
         /* @ts-ignore */
         this.client.removeAllListeners();
         return new Promise((resolve, reject) => {
-            glob(path.join(__dirname, "..\\Event") + "\\**\\*.+(js|ts)", (err: Error | null, matches: string[]) => {
+            glob(path.join(__dirname, "..\\Event\\**\\*.+(js|ts)"), (err: Error | null, matches: string[]) => {
                 if (err) return reject(err);
                 matches.forEach(async (filePath: string) => {
                     delete require.cache[filePath];
