@@ -9,7 +9,7 @@ export default class {
     client: Discord.Client | BetterClient;
 
     constructor(client: Discord.Client | BetterClient) {
-        this.client = client
+        this.client = client;
     }
 
     async reload(): Promise<void | Error> {

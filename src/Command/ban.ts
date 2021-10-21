@@ -14,8 +14,9 @@ export default {
         if (!interaction.isCommand()) return;
         await interaction.deferReply();
         if (!interaction.guild) return interaction.editReply({ content: "This command can only be used in guild!" });
-        const bot = await interaction.guild.members.fetch(client.user!.id)!;
-        const sender = await interaction.guild.members.fetch(interaction.user.id)!;
+        const bot = await interaction.guild.members.fetch(client.user!.id);
+        const sender = await interaction.guild.members.fetch(interaction.user.id);
+        if (!bot || !sender) return interaction.editReply({ content: "This isn't possible...? Either the bot/you isn't in the guild... this shouldn't appear..." });
         const target = interaction.options.getUser("target")!;
         const reason = interaction.options.getString("reason");
         const duration = interaction.options.getNumber("duration");
